@@ -1,0 +1,61 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "terraform",
+  "version": "0.1.0",
+  "description": "Terraform registry and workspace tools through the HashiCorp MCP server.",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/anthropics/claude-plugins-official/tree/ac996c0dde7fb2a9f805cd5277ffc95ecd44a321/external_plugins/terraform",
+  "repository": "https://github.com/BANG404/openagent-terraform",
+  "author": {
+    "name": "HashiCorp"
+  },
+  "extensions": {
+    "openagent": {
+      "compatibility": {
+        "plugin_protocol": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      "capabilities": [
+        "skills",
+        "mcp",
+        "commands"
+      ],
+      "mcp_tool_mode": "relay",
+      "mcp_tool_modes": {
+        "setup": "direct"
+      },
+      "commands": [
+        {
+          "id": "setup",
+          "label": "Setup",
+          "description": "Review connection prerequisites",
+          "argument": "none",
+          "command": "bin/command.mjs"
+        }
+      ],
+      "i18n": {
+        "supported_locales": [
+          "en",
+          "zh"
+        ],
+        "default_locale": "en",
+        "translations": {
+          "en": {
+            "display_name": "terraform",
+            "description": "Terraform registry and workspace tools through the HashiCorp MCP server.",
+            "commands.setup.label": "Setup",
+            "commands.setup.description": "Review connection prerequisites"
+          },
+          "zh": {
+            "display_name": "terraform",
+            "description": "通过 HashiCorp MCP 服务使用 Terraform 注册表和工作区工具。",
+            "commands.setup.label": "配置",
+            "commands.setup.description": "查看连接要求"
+          }
+        }
+      }
+    }
+  }
+}

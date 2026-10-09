@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/anthropics/claude-plugins-official",
+  "revision": "ac996c0dde7fb2a9f805cd5277ffc95ecd44a321",
+  "path": "external_plugins/terraform",
+  "source_sha256": "4599b0b6a0848a859363ace32c0c38d7d2b73fd7120ebb8adcc2289871f3a65e",
+  "artifacts": {
+    "command.mjs": "83812b93bbeabe85d2205d93eceff538c174d0957cf4ac0f4b197141ebb870e1",
+    "status.mjs": "db08b2ec3d5c5de96b264cb54b90fa34b76a9156d0219d084317a8769b76f118",
+    "terraform.mjs": "6c7e4ee7eb4fe8233e694e953ece143ac40c2bc4df41b4d85a3d1c2da021ffb8"
+  }
+}
