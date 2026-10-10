@@ -4,11 +4,15 @@ Terraform registry and workspace tools through the HashiCorp MCP server.
 
 Install the release archive through OpenAgent Integrations → Plugins. This is an independent adaptation.
 
+## Plugin settings
+
+Requires a Runtime with the configuration-v1 feature. Open Integrations → Plugins → this plugin to save parameters and credentials. Password fields show only whether a token exists; leave blank to keep it, or explicitly clear and save. OAuth HTTP connectors offer Test, Authorize and local Disconnect here. These operations preserve package data and existing credential files. Running daemons need a restart after changing settings. Actual account operations still require provider-specific acceptance.
+
 ## Setup
 
-- Docker and optional Terraform Enterprise token in PLUGIN_DATA/credentials.json as {"token":"..."}.
+- Docker and optional Terraform Enterprise token saved in plugin settings.
 
-Run /terraform:setup. Package state and credentials belong in the active OpenAgent home at plugin-data/terraform/. Never place secrets in plugin.json or commit them. Refresh the plugin after changing credentials.
+Run /terraform:setup. Package state belongs in plugin-data/terraform/; private settings and credentials are stored by the Runtime in plugin-settings/terraform.json. Never place secrets in plugin.json or commit them. Refresh the plugin after changing credentials.
 
 ## Verification
 

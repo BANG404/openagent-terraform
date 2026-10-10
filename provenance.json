@@ -6,6 +6,6 @@
   "artifacts": {
     "command.mjs": "83812b93bbeabe85d2205d93eceff538c174d0957cf4ac0f4b197141ebb870e1",
     "status.mjs": "db08b2ec3d5c5de96b264cb54b90fa34b76a9156d0219d084317a8769b76f118",
-    "terraform.mjs": "6c7e4ee7eb4fe8233e694e953ece143ac40c2bc4df41b4d85a3d1c2da021ffb8"
+    "terraform.mjs": "daa38b96b6ce74f62615864f20a5589e5ceeb1a363cb4d18b95ac74d87032028"
   }
 }

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "terraform",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Terraform registry and workspace tools through the HashiCorp MCP server.",
   "license": "Apache-2.0",
   "homepage": "https://github.com/anthropics/claude-plugins-official/tree/ac996c0dde7fb2a9f805cd5277ffc95ecd44a321/external_plugins/terraform",
@@ -15,7 +15,10 @@
         "plugin_protocol": {
           "min": 1,
           "max": 1
-        }
+        },
+        "features": [
+          "configuration-v1"
+        ]
       },
       "capabilities": [
         "skills",
@@ -46,15 +49,33 @@
             "display_name": "terraform",
             "description": "Terraform registry and workspace tools through the HashiCorp MCP server.",
             "commands.setup.label": "Setup",
-            "commands.setup.description": "Review connection prerequisites"
+            "commands.setup.description": "Review connection prerequisites",
+            "configuration.token.label": "Terraform Enterprise token",
+            "configuration.token.description": "Saved privately for this plugin. Leave the password field blank to keep its saved value."
           },
           "zh": {
             "display_name": "terraform",
             "description": "通过 HashiCorp MCP 服务使用 Terraform 注册表和工作区工具。",
             "commands.setup.label": "配置",
-            "commands.setup.description": "查看连接要求"
+            "commands.setup.description": "查看连接要求",
+            "configuration.token.label": "访问令牌",
+            "configuration.token.description": "此插件的密钥私有保存；密码框留空表示保留已保存的密钥。"
           }
         }
+      },
+      "configuration": {
+        "version": 1,
+        "fields": [
+          {
+            "key": "token",
+            "label": "Terraform Enterprise token",
+            "description": "Saved privately for this plugin. Leave the password field blank to keep its saved value.",
+            "type": "string",
+            "secret": true,
+            "required": false,
+            "env": "TFE_TOKEN"
+          }
+        ]
       }
     }
   }
