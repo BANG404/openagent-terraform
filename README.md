@@ -1,6 +1,6 @@
-# terraform for OpenAgent
+# Terraform Infrastructure
 
-Terraform registry and workspace tools through the HashiCorp MCP server.
+Look up Terraform providers and modules and work with infrastructure workspaces; requires Docker, with account access for hosted workspaces.
 
 Install the release archive through OpenAgent Integrations → Plugins. This is an independent adaptation.
 
@@ -22,6 +22,6 @@ Bundled tests cover immutable artifacts, config conversion and service configura
 
 ## 中文
 
-通过 HashiCorp MCP 服务使用 Terraform 注册表和工作区工具。 安装发布包后运行 /terraform:setup 查看配置要求。凭据和状态保存在当前 OpenAgent 数据目录的 plugin-data/terraform/ 下，修改后刷新插件。
+查询 Terraform 提供商和模块，并操作基础设施工作区；需要 Docker，托管工作区还需账号权限。 安装发布包后运行 /terraform:setup 查看配置要求。凭据和状态保存在当前 OpenAgent 数据目录的 plugin-data/terraform/ 下，修改后刷新插件。
 
 Upstream source and exact revision are recorded in provenance.json. Bundled source remains available for inspection.
